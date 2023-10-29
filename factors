@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 import sys
 
 
@@ -21,6 +20,9 @@ def factorize_numbers(input_file):
                 n = int(line.strip())
                 p, q = factorize(n)
                 print(f"{n}={q}*{p}")
+                # Simulate writing to a file
+                with open("output.txt", "a") as output_file:
+                    output_file.write(f"{n}={q}*{p}\n")
 
     except FileNotFoundError:
         print("Input file not found.")
