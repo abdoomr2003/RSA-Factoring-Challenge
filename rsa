@@ -34,7 +34,7 @@ def factorize_rsa(input_file):
             line = file.readline()
             n = int(line.strip())
             p, q = factorize_prime(n)
-            print(f"{n}={p}*{q}")
+            print(f"{n}={q}*{p}")
 
     except FileNotFoundError:
         print("Input file not found.")
